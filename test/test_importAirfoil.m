@@ -27,23 +27,24 @@ close all, clear all, clc, tic
 disp([' --- ' mfilename ' --- ']);
 
 addpath([pwd '\..\']);
-apn = readdir([pwd '\airfoils'])(3:end);
+afns = readdir([pwd '\airfoils'])(3:end); % airfoil names
+N_afns = length(afns);
 
 % - Import airfoil then show and save figure
 figure(1)
 hold on, box on, grid on
 xlabel('x [-]'), ylabel('y [-]');
 axis equal
-for i = 1:length(apn);
+for i = 1:N_afns;
   cla;
-  disp([' Importing ' apn{i}]);
-  x_y{i} = importAirfoil([pwd '\airfoils\' apn{i}]);
+  disp([' Importing ' afns{i} ' [' num2str(i) '/' num2str(N_afns) ']']);
+  x_y{i} = importAirfoil([pwd '\airfoils\' afns{i}]);
   plot([0 1], [0 0], 'LineWidth', 2)
   if(~isempty(x_y) && size(x_y{i}, 2) == 2) 
     plot(x_y{i}(:, 1), x_y{i}(:, 2), 'LineWidth', 2)
   end
-  title(apn{i});
-  path = [pwd '\figures\' strrep(strrep(apn{i}, '.', '-'), '/', ' ')];
+  title(afns{i});
+  path = [pwd '\figures\' strrep(strrep(afns{i}, '.', '-'), '/', ' ')];
   print(path, '-dpng');
   print(path, '-dsvg');
 end
