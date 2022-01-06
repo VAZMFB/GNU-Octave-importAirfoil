@@ -3,7 +3,7 @@
 Airfoil coordinates import function in GNU Octave.
 
 <p align="center">
-  <img src="https://vazmfb.com/web/img/github/importAirfoil_OCT.png" width="800">
+  <img src="https://vazmfb.com/web/img/github/importAirfoil_OCT.png?v=1" width="800">
 </p>
 
 
