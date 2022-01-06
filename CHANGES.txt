@@ -1,0 +1,10 @@
+--------------------
+GNU-Octave-importAirfoil
+GNU Octave Airfoil coordinates import function.
+--------------------
+
+Release 1.0.0, 05.01.2022.
+
+- Initial release
+
+--------------------
