@@ -6,6 +6,10 @@ function af = importAirfoil(file)
 % Department of Aerospace Engineering, Flying structures
 % https://vazmfb.com
 % Belgrade, 2022
+% ----- INPUTS -----
+% file - full path to document with airfoil data
+% ----- OUTPUTS -----
+% af - airfoil coordinates
 % ---------------
 %
 % Copyright (C) 2022 Milos Petrasinovic <info@vazmfb.com>
@@ -23,10 +27,6 @@ function af = importAirfoil(file)
 % You should have received a copy of the GNU General Public License
 % along with this program.  If not, see <https://www.gnu.org/licenses/>.
 %
-% ----- INPUTS -----
-% file - full path to document with airfoil data
-% ----- OUTPUTS -----
-% af - airfoil coordinates
 % --------------------
 
 if(isfile(file))
